@@ -18,7 +18,7 @@
 
     // Populate Age details
     $('#age').click(() => {
-
+        //sample
     });
 
     // On Submit button click
