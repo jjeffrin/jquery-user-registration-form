@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="jumbotron" style="background-color: #f3e5f5">
+        <div class="container">
+            <h2>User Resgistration Form</h2>
+            <h5 class="text-danger"><small>* represents mandatory fields</small></h5>
+            <form id="user-reg-form">
+            <div class="form-group">
+                <label for="first-name"><strong>First Name <span class="text-danger">*</span></strong></label>
+                <input type="text" id="first-name" class="form-control col-sm-6">
+            </div>
+            <div class="form-group">
+                <label for="last-name"><strong>Last Name <span class="text-danger">*</span></strong></label>
+                <input type="text" id="last-name" class="form-control col-sm-6">
+            </div>
+            <div class="form-group">
+                <label for="age"><strong>Age <span class="text-danger">*</span></strong></label><br>
+                <select name="age-selector" id="age" class="custom-select form-control col-sm-6">
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="gender"><strong>Gender</strong></label><br>
+                <select name="gender-selector" id="gender" class="custom-select form-control col-sm-6">
+                    <option value="18">Male</option>
+                    <option value="19">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="address-1"><strong>Address line 1 <span class="text-danger">*</span></strong></label>
+                <input type="text" id="address-1" class="form-control col-sm-6">
+            </div>
+            <div class="form-group">
+                <label for="address-2"><strong>Address line 2</strong></label>
+                <input type="text" id="address-2" class="form-control col-sm-6">
+            </div>
+            <div class="form-group">
+                <label for="country"><strong>Country <span class="text-danger">*</span></strong></label><br>
+                <select name="country-selector" id="country" class="custom-select form-control col-sm-6">
+                    <option value="18">Male</option>
+                    <option value="19">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="state"><strong>State <span class="text-danger">*</span></strong></label><br>
+                <select name="state-selector" id="state" class="custom-select form-control col-sm-6">
+                    <option value="18">Male</option>
+                    <option value="19">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="city"><strong>City <span class="text-danger">*</span></strong></label><br>
+                <select name="city-selector" id="city" class="custom-select form-control col-sm-6">
+                    <option value="18">Male</option>
+                    <option value="19">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="mobile-number"><strong>Mobile Number <span class="text-danger">*</span></strong></label>
+                <input type="text" id="mobile-number" class="form-control col-sm-6">
+            </div>
+            <div class="form-group">
+                <label for="relocation"><strong>Relocation <span class="text-danger">*</span></strong></label><br>
+                <div class="form-check form-check-inline" id="relocation">
+                    <input class="form-check-input" type="radio" name="relocation-radio" value="yes">
+                    <label class="form-check-label" for="relocation-yes">
+                        Yes
+                    </label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="relocation-radio" value="no" checked>
+                    <label class="form-check-label" for="relocation-no">
+                        No
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comment"><strong>Comment</strong></label>
+                <div class="input-group">
+                    <textarea name="comment" id="comment" class="col-sm-6" style="height: 200px"></textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" id="btn-submit" class="btn btn-info col-sm-3">Submit</button>
+                <button type="reset" class="btn btn-info col-sm-3">Clear</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script src="~/Scripts/main.js"></script>
+</body>
+</html>
