@@ -9,37 +9,49 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="jumbotron" style="background-color: #f3e5f5">
+    <div id="background" class="jumbotron" style="background-color: #eeeeee">
         <div class="container">
-            <h2>User Resgistration Form</h2>
+            <div class="row">
+                <div class="col-sm-9">
+                    <h2>User Resgistration Form</h2>
+                </div>
+                <div class="col-sm-3">
+                    <button class="btn btn-primary" id="theme">Switch to Dark Mode</button>
+                </div>   
+            </div>
             <h5 class="text-danger"><small>* represents mandatory fields</small></h5>
+            <h4 class="font-italic text-muted" id="salutation"></h4>
             <form id="user-reg-form">
             <div class="form-group">
                 <label for="first-name"><strong>First Name <span class="text-danger">*</span></strong></label>
                 <input type="text" id="first-name" class="form-control col-sm-6">
             </div>
+            <div id="first-name-error"></div>
             <div class="form-group">
                 <label for="last-name"><strong>Last Name <span class="text-danger">*</span></strong></label>
                 <input type="text" id="last-name" class="form-control col-sm-6">
             </div>
+            <div id="last-name-error"></div>
             <div class="form-group">
                 <label for="age"><strong>Age <span class="text-danger">*</span></strong></label><br>
                 <select name="age-selector" id="age" class="custom-select form-control col-sm-6">
-                    <option value="18">18</option>
-                    <option value="19">19</option>
+                   
                 </select>
             </div>
             <div class="form-group">
-                <label for="gender"><strong>Gender</strong></label><br>
+                <label for="gender"><strong>Gender <span class="text-danger">*</span></strong></label><br>
                 <select name="gender-selector" id="gender" class="custom-select form-control col-sm-6">
-                    <option value="18">Male</option>
-                    <option value="19">Female</option>
+                    <option value="0">Please choose your gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
                 </select>
             </div>
+            <div id="gender-error"></div>
             <div class="form-group">
                 <label for="address-1"><strong>Address line 1 <span class="text-danger">*</span></strong></label>
                 <input type="text" id="address-1" class="form-control col-sm-6">
             </div>
+            <div id="address-error"></div>
             <div class="form-group">
                 <label for="address-2"><strong>Address line 2</strong></label>
                 <input type="text" id="address-2" class="form-control col-sm-6">
@@ -47,28 +59,29 @@
             <div class="form-group">
                 <label for="country"><strong>Country <span class="text-danger">*</span></strong></label><br>
                 <select name="country-selector" id="country" class="custom-select form-control col-sm-6">
-                    <option value="18">Male</option>
-                    <option value="19">Female</option>
+                    
                 </select>
             </div>
+            <div id="country-error"></div>
             <div class="form-group">
                 <label for="state"><strong>State <span class="text-danger">*</span></strong></label><br>
                 <select name="state-selector" id="state" class="custom-select form-control col-sm-6">
-                    <option value="18">Male</option>
-                    <option value="19">Female</option>
+
                 </select>
             </div>
+            <div id="state-error"></div>
             <div class="form-group">
                 <label for="city"><strong>City <span class="text-danger">*</span></strong></label><br>
                 <select name="city-selector" id="city" class="custom-select form-control col-sm-6">
-                    <option value="18">Male</option>
-                    <option value="19">Female</option>
+
                 </select>
             </div>
+            <div id="city-error"></div>
             <div class="form-group">
                 <label for="mobile-number"><strong>Mobile Number <span class="text-danger">*</span></strong></label>
                 <input type="text" id="mobile-number" class="form-control col-sm-6">
             </div>
+            <div id="mobile-error"></div>
             <div class="form-group">
                 <label for="relocation"><strong>Relocation <span class="text-danger">*</span></strong></label><br>
                 <div class="form-check form-check-inline" id="relocation">
@@ -90,6 +103,7 @@
                     <textarea name="comment" id="comment" class="col-sm-6" style="height: 200px"></textarea>
                 </div>
             </div>
+            <div id="comment-error"></div>
             <div class="form-group">
                 <button type="button" id="btn-submit" class="btn btn-info col-sm-3">Submit</button>
                 <button type="reset" class="btn btn-info col-sm-3">Clear</button>
